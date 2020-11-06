@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane alignment="CENTER" hgap="20.0" prefHeight="400.0" prefWidth="400.0" style="-fx-background-color: black;" vgap="20.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <GridPane prefHeight="90.0" prefWidth="260.0" GridPane.rowIndex="1">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <ButtonBar prefHeight="90.0" prefWidth="0.0" GridPane.rowIndex="1" GridPane.rowSpan="3">
+               <GridPane.margin>
+                  <Insets left="100.0" />
+               </GridPane.margin>
+            </ButtonBar>
+            <Button id="btNum0" fx:id="btNum0" ellipsisString="0" mnemonicParsing="false" onAction="#handle" style="-fx-background-color: slateGray;" text="0" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Button>
+            <Button id="btNum1" blendMode="SRC_ATOP" contentDisplay="RIGHT" ellipsisString="1" mnemonicParsing="false" onAction="#numOne" prefHeight="25.0" prefWidth="14.0" style="-fx-background-color: slateGray;" text="Button" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="25.0" />
+               </GridPane.margin>
+            </Button>
+            <Button id="btNum2" ellipsisString="..." mnemonicParsing="false" onAction="#numTwo" style="-fx-background-color: slateGray;" text="2" GridPane.rowIndex="1">
+               <opaqueInsets>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </opaqueInsets>
+               <GridPane.margin>
+                  <Insets left="50.0" />
+               </GridPane.margin>
+            </Button>
+            <Button id="btNum3" mnemonicParsing="false" onAction="#numThree" style="-fx-background-color: slateGray;" text="3" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="75.0" />
+               </GridPane.margin>
+            </Button>
+            <Button id="btNum4" alignment="CENTER" mnemonicParsing="false" onAction="#numFour" style="-fx-background-color: slateGray;" text="4" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="100.0" />
+               </GridPane.margin>
+            </Button>
+            <Button id="btNum5" blendMode="SRC_ATOP" ellipsisString="5" mnemonicParsing="false" onAction="#numFive" style="-fx-background-color: slateGray;" text="5" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Button>
+            <Button id="btNum6" mnemonicParsing="false" onAction="#numSix" style="-fx-background-color: slateGray;" text="6" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="30.0" />
+               </GridPane.margin>
+            </Button>
+            <Button id="btNum7" mnemonicParsing="false" onAction="#numSeven" style="-fx-background-color: slateGray;" text="7" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="190.0" />
+               </GridPane.margin>
+            </Button>
+            <Button id="btNum8" mnemonicParsing="false" onAction="#numEight" style="-fx-background-color: slateGray;" text="8" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" onAction="#multiplyNums" style="-fx-background-color: orange;" text="X" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="145.0" />
+               </GridPane.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#divideNums" style="-fx-background-color: orange;" text="÷" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="40.0" />
+               </GridPane.margin>
+            </Button>
+            <TextFlow maxWidth="100.0" minWidth="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="250.0" top="120.0" />
+               </GridPane.margin>
+               <children>
+                  <Label fx:id="num2Text" alignment="BOTTOM_LEFT" prefHeight="17.0" prefWidth="37.0" style="-fx-background-color: white;" translateX="65.0" wrapText="true">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </Label>
+                  <Label fx:id="num1Text" alignment="CENTER" style="-fx-background-color: white;" translateX="-40.0" wrapText="true">
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="equationText" style="-fx-background-color: white;" translateX="-30.0" wrapText="true">
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="answerText" style="-fx-background-color: green;" textAlignment="CENTER" translateX="30.0" wrapText="true">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Label>
+               </children>
+            </TextFlow>
+            <Label style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </Label>
+            <Button mnemonicParsing="false" onAction="#clear" style="-fx-background-color: slateGray;" text="Clear" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="50.0" top="60.0" />
+               </GridPane.margin>
+            </Button>
+            <Button id="btPlus" mnemonicParsing="false" onAction="#addNums" style="-fx-background-color: orange;" text="+" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="95.0" />
+               </GridPane.margin></Button>
+            <Button id="btMinus" mnemonicParsing="false" onAction="#subtractNums" style="-fx-background-color: orange;" text="-" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="-8.0" />
+               </GridPane.margin>
+            </Button>
+            <Button id="btEquals" mnemonicParsing="false" onAction="#equals" style="-fx-background-color: orange;" text="=" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="70.0" />
+               </GridPane.margin>
+            </Button>
+         </children>
+      </GridPane>
+      <Button id="btNum9" mnemonicParsing="false" onAction="#numNine" style="-fx-background-color: slateGray;" text="9" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets left="25.0" />
+         </GridPane.margin>
+      </Button>
+   </children>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>
